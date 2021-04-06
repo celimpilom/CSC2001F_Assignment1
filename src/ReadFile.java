@@ -6,6 +6,7 @@ public class ReadFile {
     File myObj;
     Scanner myReader;
     String[] list;
+    BinarySearchTree<String> tree;
     
     ReadFile() throws FileNotFoundException{
         myObj = new File("files/oklist.txt");
@@ -23,6 +24,17 @@ public class ReadFile {
           myReader.close();
     }
 
+    void tree(){
+        while (myReader.hasNextLine()) {
+          String data = myReader.nextLine();
+          tree.insert(data.toString());
+    
+      }              // Creates BST
+    }
+    public BinarySearchTree<String> getTree(){
+        return this.tree;//returns Tree
+    }
+    
     public String[] getArray(){
         return list;
     }
