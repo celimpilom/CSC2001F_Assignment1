@@ -17,4 +17,20 @@ public class AccessBSTApp {
           
            
     }
+    static String printStudent(String studentID){
+        
+               if (tree.find(studentID) != null){
+                   String[] b = i.split(" ");
+                   return b[1] + " " + b[2];
+               }
+           
+        return "Not found!";
+            } 
+    static void printAll(){
+        for (String i: array){
+            String [] b = i.split(" ");
+            System.out.println(b[0] +" " + b[1] + " " + b[2]);
+        }
+        
+    }
 }

@@ -15,5 +15,8 @@ CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
 
 default: $(CLASS_FILES)
 
+docs:
+	javadoc -d doc/ src/*.java
+
 run:
 	java -cp bin AccessArrayApp $(stdN)

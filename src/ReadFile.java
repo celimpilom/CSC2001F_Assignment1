@@ -12,6 +12,7 @@ public class ReadFile {
         myObj = new File("files/oklist.txt");
         myReader = new Scanner(myObj);
         list = new String[5000];
+        tree = new BinarySearchTree<String>();
     }
 
     void array() throws FileNotFoundException {
@@ -34,7 +35,7 @@ public class ReadFile {
     public BinarySearchTree<String> getTree(){
         return this.tree;//returns Tree
     }
-    
+
     public String[] getArray(){
         return list;
     }

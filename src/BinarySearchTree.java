@@ -37,7 +37,13 @@ public class BinarySearchTree<dataType extends Comparable<? super dataType>> ext
          return find (d, root);
    }
    public BinaryTreeNode<dataType> find ( dataType d, BinaryTreeNode<dataType> node )
-   {
+   {  
+      if (node.data instanceof String && d instanceof String){
+         String nodeData = (String)node.data;
+         if (nodeData.contains((String)d)){
+            return node;
+         }
+      }
       if (d.compareTo (node.data) == 0) 
          return node;
       else if (d.compareTo (node.data) < 0)
