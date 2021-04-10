@@ -5,15 +5,18 @@ import java.io.FileNotFoundException;
 
 public class AccessArrayApp{
     static String[]   array;
+    static int opCount;
     public static void main(String[] args ) throws FileNotFoundException{
 
         ReadFile obj = new ReadFile();
         obj.array();
         array =  (obj.getArray());
+        opCount = 0;
         
         if (args.length == 1){
             String studentID = args[0];
             System.out.println(printStudent(studentID) );
+            System.out.println(opCount);
         } else {
             printAll();
         }
@@ -22,12 +25,15 @@ public class AccessArrayApp{
     }
     static String printStudent(String studentID){
         for (String i: array){
+            opCount ++;
                if (i.contains(studentID)){
                    String[] b = i.split(" ");
                    return b[1] + " " + b[2];
+                   
+
                }
            }
-        return "Not found!";
+        return "Access denied!";
         }
        
     static void printAll(){

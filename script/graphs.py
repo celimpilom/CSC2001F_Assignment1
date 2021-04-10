@@ -9,7 +9,7 @@ def numbers(file):
     return names
 
 
-for n in range(10, 101, 10):
+for n in range(5, 51, 5):
     for type in ["array","bst"]:
         names = numbers(f"/home/celimpilo/Documents/CSC2001F/Assignments/Assignment1/files/data/{type}_{n}.txt")
         if type == "array":
